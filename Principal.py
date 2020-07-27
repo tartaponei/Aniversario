@@ -8,9 +8,18 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import webbrowser
 
 
 class Ui_TelaPrincipal(object):
+    #def show_
+
+    def openSpot(self):
+        webbrowser.open("https://open.spotify.com/playlist/6QUi0mtWqckDpAFJBofeRT?si=5zKrtOIZQ5ica45FLTyFgQ")
+
+    def openAlbum(self):
+        webbrowser.open("https://photos.app.goo.gl/6U6wphzQ4oCMmcyc7")
+
     def setupUi(self, TelaPrincipal):
         TelaPrincipal.setObjectName("TelaPrincipal")
         TelaPrincipal.resize(543, 362)
@@ -32,6 +41,9 @@ class Ui_TelaPrincipal(object):
         font.setPointSize(10)
         self.btn_playlist.setFont(font)
         self.btn_playlist.setObjectName("btn_playlist")
+
+        self.btn_playlist.clicked.connect(self.openSpot)
+
         self.btn_evolucao = QtWidgets.QPushButton(TelaPrincipal)
         self.btn_evolucao.setGeometry(QtCore.QRect(30, 230, 141, 41))
         font = QtGui.QFont()
@@ -39,6 +51,7 @@ class Ui_TelaPrincipal(object):
         font.setPointSize(10)
         self.btn_evolucao.setFont(font)
         self.btn_evolucao.setObjectName("btn_evolucao")
+
         self.btn_album = QtWidgets.QPushButton(TelaPrincipal)
         self.btn_album.setGeometry(QtCore.QRect(30, 170, 141, 41))
         font = QtGui.QFont()
@@ -46,6 +59,9 @@ class Ui_TelaPrincipal(object):
         font.setPointSize(10)
         self.btn_album.setFont(font)
         self.btn_album.setObjectName("btn_album")
+
+        self.btn_album.clicked.connect(self.openAlbum)
+
         self.btn_texto = QtWidgets.QPushButton(TelaPrincipal)
         self.btn_texto.setGeometry(QtCore.QRect(370, 110, 141, 41))
         font = QtGui.QFont()
@@ -53,6 +69,7 @@ class Ui_TelaPrincipal(object):
         font.setPointSize(10)
         self.btn_texto.setFont(font)
         self.btn_texto.setObjectName("btn_texto")
+
         self.btn_creditos = QtWidgets.QPushButton(TelaPrincipal)
         self.btn_creditos.setGeometry(QtCore.QRect(370, 230, 141, 41))
         font = QtGui.QFont()
@@ -60,12 +77,14 @@ class Ui_TelaPrincipal(object):
         font.setPointSize(10)
         self.btn_creditos.setFont(font)
         self.btn_creditos.setObjectName("btn_creditos")
+
         self.btn_frases = QtWidgets.QPushButton(TelaPrincipal)
         self.btn_frases.setGeometry(QtCore.QRect(430, 300, 81, 23))
         font = QtGui.QFont()
         font.setFamily("Arial")
         self.btn_frases.setFont(font)
         self.btn_frases.setObjectName("btn_frases")
+
         self.label_felizaniversario = QtWidgets.QLabel(TelaPrincipal)
         self.label_felizaniversario.setGeometry(QtCore.QRect(140, 60, 271, 18))
         font = QtGui.QFont()

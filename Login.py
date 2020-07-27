@@ -9,14 +9,44 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
-from Principal import Ui_TelaPrincipal
+from TelaTexto import Ui_TelaTexto
 
 class Ui_TelaLogin(object):
-    def show_Principal(self):
-        self.janelaPrincipal = QtWidgets.QDialog()
-        self.ui = Ui_TelaPrincipal()
-        self.ui.setupUi(self.janelaPrincipal)
-        self.janelaPrincipal.show()
+    def show_MessageBox(self, title, message):
+        msgBox = QtWidgets.QMessageBox()
+        msgBox.setIcon(QtWidgets.QMessageBox.Warning)
+        msgBox.setWindowTitle(title)
+        msgBox.setText(message)
+        msgBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msgBox.exec_()
+
+    #checar depois com bruno
+    def show_MessageBox_Texto(self, message):
+        msgBox = QtWidgets.QMessageBox()
+        #msgBox.setIcon(QtWidgets.QMessageBox.Warning)
+        msgBox.setWindowTitle("...")
+        msgBox.setText(message)
+        msgBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msgBox.buttonClicked.connect(lambda: self.trocaTexto(msgBox))
+        msgBox.exec_()
+
+    #checar depois com bruno
+    def trocaTexto(self, msgBox):
+        #print(i.text())
+        connection = sqlite3.connect("login.db")
+        c = connection.cursor()
+        #c.execute("SELECT * FROM TEXTO")
+
+        for linha in c.execute("SELECT * FROM TEXTO"):
+            #print(linha) #ta printando certinho
+            msgBox.setText(linha[0])
+        connection.close()
+
+    def show_Texto(self):
+        self.janelaTxt = QtWidgets.QDialog()
+        self.ui = Ui_TelaTexto()
+        self.ui.setupUi(self.janelaTxt)
+        self.janelaTxt.show()
 
     def loginCheck(self):
         login = self.form_login.text()
@@ -26,9 +56,12 @@ class Ui_TelaLogin(object):
         result = connection.execute("SELECT * FROM USERS WHERE LOGIN = ? AND SENHA = ?", (login, senha))
 
         if(len(result.fetchall()) > 0): #se tiver achado
-            self.show_Principal()
+            self.show_Texto()
         else:
             print("usuario nao achado")
+            self.show_MessageBox("Ei!", "Login e/ou senha inválidos.")
+
+        connection.close()
 
     def setupUi(self, TelaLogin):
         TelaLogin.setObjectName("TelaLogin")

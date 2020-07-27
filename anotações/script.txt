@@ -1,0 +1,45 @@
+========== MESSAGE BOXES DO INÍCIO ====================================
+
+> Oi :) Você deve estar se perguntando o que é isso.
+
+> E eu te respondo: é um programa nosso! Nele você vai poder ter acesso a várias coisas legais sobre a gente como um casal.
+
+> Quando eu disse que tinha começado a estudar uma coisa nova em Python, era pra isso. Pra fazer isso pra você.
+
+> E, bom, você já deve estar acostumado com os meus textos e cartinhas clichês, mas não consigo evitar. Sempre tenho muito o que dizer pra você.
+
+> Não sei bem por onde começar. Eu realmente não esperava que você fosse fazer parte da minha vida. Quando eu te conheci e conversamos pelo Whatsapp a primeira vez, eu realmente achei que seria só aquela vez, que você seria mais um dos contatos que eu teria de coleção, só pra ver meus status, nada mais.
+
+> Até hoje eu não sei o que deu na minha cabeça pra te chamar pra conversar no dia em que decidimos passar a conversar o dia todo. Penso que era pra ter sido assim desde o início. E é isso o que me motivou a não terminar com você nas vezes em que considerei isso, e eu não me arrependo. Não mesmo.
+
+> E eu também sou grata por você também não ter terminado. Eu sempre falo isso, mas eu sempre penso nas merdas que já te fiz e é muito difícil deixar elas irem embora, mas eu tô tentando. Desculpa por todas elas. E como eu sempre digo, tô me esforçando pra melhorar isso tudo. Você me faz querer mudar isso tudo. Por você, vale a pena mudar certas coisas. Minha inveja, meu egoísmo, meu individualismo. Vale a pena.
+
+> Você além de meu namorado é o meu melhor amigo, sempre. É o primeiro que eu busco quando eu tô feliz, quando eu tô triste e quero desabafar com alguém, quando eu tô precisando de ajuda em qualquer coisa, quando tô com uma ideia nova, quando quero começar um novo projeto. É sempre você, apesar dos apesares. Mesmo você sendo meio insensível ou algo do tipo às vezes.
+
+> E eu não canso de falar que você despertou uma versão melhor de mim. Não é a melhor de todas porque ainda tenho muita coisa pra mudar e repensar, mas você tá despertando isso aos poucos. E, mesmo a minha parte lógica achando isso uma coisa errada, eu realmente não consigo mais me ver sem você do meu lado. E vou aprender a administrar esse sentimento de forma que não me prejudique.
+
+> Passou tão rápido. Parece que foi ontem que você foi na Rural e me pediu em namoro no lago das capivaras. Parece que foi ontem que beijamos a primeira vez no ônibus. Parece que foi ontem que a gente foi no cinema a primeira vez e eu encostei a cabeça no seu ombro. E ao mesmo tempo parece que faz tanto tempo, que tenho essa conexão com você há muitos anos. Eu realmente espero que dure por muitos anos meso, e isso só demanda esforço dos dois lados.
+
+> Ninguém é perfeito, e precisamos de esforço pra nos deixar menos defeituosos do que somos. Do mesmo jeito que eu já te machuquei várias vezes, você também já me machucou várias. Mas a gente aprende com o tempo, e sempre renovamos o que sentimos. E isso faz parte do esforço que eu disse antes, se já não é ele inteiro.
+
+> Às vezes não parece real. Mas é, e sou grata todos os dias por ter alguém como você na minha vida. Eu não sei mais no que eu acredito, mas se algo guiou a gente então eu sou totalmente grata a esse algo.
+
+> Obrigada por me dar apoio sempre nos meus maiores problemas, por sempre estar disposto a me ajudar, por ver coisas boas em mim, por insistir e não desistir de mim em todos os sentidos. Por sempre separar um tempinho pra mim quando você tá ocupado com seu futuro, e por me incluir nele em alguns de seus planos. Por estar me ensinando lições valiosas desde os nossos primeiros dias, e por ter virado a minha vida de cabeça pra cima. É, pra cima. Obrigada por sempre estar disposto a me oferecer seu abraço quente quando preciso me aquecer, e por me dar toques frios quando preciso esfriar. Obrigada por iluminar meus dias. Obrigada por tudo.
+
+> Você é a pessoa mais inteligente e incrível que eu já conheci. Sua beleza veio de bônus rs. Espero que eu seja importante pra você ao menos metade do que você é pra mim.
+
+> Feliz 1 ano de namoro. Eu realmente espero que continuemos juntos por mais um tempinho. Ok, um tempão, rs.
+
+> Eu te amo muito. Mesmo quando não parecer, eu te amo muito. E nunca duvide disso.
+
+========== CRÉDITOS ===================================================
+
+Obrigada ao Tim do canal Tech With Tim pelos seus tutoriais incríveis de PyQt5 que me deram a base.
+Obrigada ao Ajay do canal Ssj6 por ter sido o único que eu achei a fazer um vídeo completo sobre navegação entre páginas, junto com um sistema de login com banco de dados.
+Obrigada a Claudia e Bruno pelo apoio e ajuda na questã
+
+========== BOTÃO "CLICA AQUI..." ======================================
+* frases enumeradas escolhidas aleatoriamente pelo seu número
+
+
+(Tá procurando o login e a senha? Abre o prog.py no IDE do Python (caso vc tenha o Python instalado) ou no bloco de notas...)
