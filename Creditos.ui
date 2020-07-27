@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TelaCreditos</class>
+ <widget class="QDialog" name="TelaCreditos">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>571</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Créditos</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/icon.png</normaloff>img/icon.png</iconset>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>531</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Isso não é um TCC mas é um projeto então vai ter agradecimentos mesmo, risos. Só pelo fato de ter um banco de dados eu já considero um projeto enorme, odeio mexer com isso.
+
+Primeiramente obrigada aos meus professores de programação do CP2 por despertarem em mim o amor, que hoje é bem maior que na época, pela área da informática e por me darem toda a base. Chico e Flávia principalmente.
+
+Obrigada ao Tim do canal Tech With Tim pelos seus tutoriais incríveis de PyQt5 muito bem explicados que me deram a base pra esse código.
+Obrigada ao Ajay do canal Ssj6 por ter sido o único que eu achei que fez um vídeo completo sobre navegação entre páginas, junto com um sistema de login com banco de dados.
+
+Obrigada à Claudia pelo apoio moral e pelas dicas de apps e etc pra facilitar meu trabalho. Você sempre tem umas cartas na manga.
+Obrigada ao Bruno por ter aguentado minhas mensagens infinitas com minhas dúvidas idiotas e por estar disposto a me ajudar apesar da minha chatice.
+Na questão de apoio moral, agradeço também à Carina, além do próprio Jonathan, que não sabia o propósito disso mas me dava apoio mesmo assim.
+Obrigada támbém à Nayure, de tão longe sempre me dando apoio moral também, e por ter me dado algumas ideias pra esse projeto.
+
+E obrigada principalmente ao Jonathan. Você foi a minha maior motivação pra estudar o PyQt5 e todas as questões sobre interface (coisa que não é a minha praia). Fazer as coisas pra você aumenta minha motivação pelo menos umas 5x. Obrigada por me motivar e ser um exemplo.</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

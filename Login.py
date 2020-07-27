@@ -20,33 +20,12 @@ class Ui_TelaLogin(object):
         msgBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
         msgBox.exec_()
 
-    #checar depois com bruno
-    def show_MessageBox_Texto(self, message):
-        msgBox = QtWidgets.QMessageBox()
-        #msgBox.setIcon(QtWidgets.QMessageBox.Warning)
-        msgBox.setWindowTitle("...")
-        msgBox.setText(message)
-        msgBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
-        msgBox.buttonClicked.connect(lambda: self.trocaTexto(msgBox))
-        msgBox.exec_()
-
-    #checar depois com bruno
-    def trocaTexto(self, msgBox):
-        #print(i.text())
-        connection = sqlite3.connect("login.db")
-        c = connection.cursor()
-        #c.execute("SELECT * FROM TEXTO")
-
-        for linha in c.execute("SELECT * FROM TEXTO"):
-            #print(linha) #ta printando certinho
-            msgBox.setText(linha[0])
-        connection.close()
-
     def show_Texto(self):
         self.janelaTxt = QtWidgets.QDialog()
         self.ui = Ui_TelaTexto()
         self.ui.setupUi(self.janelaTxt)
         self.janelaTxt.show()
+        TelaLogin.hide()
 
     def loginCheck(self):
         login = self.form_login.text()
@@ -133,6 +112,10 @@ class Ui_TelaLogin(object):
 
         self.retranslateUi(TelaLogin)
         QtCore.QMetaObject.connectSlotsByName(TelaLogin)
+    """
+    def __init__(self):
+        self.btn_entrar.clicked.connect(self.close)
+    """
 
     def retranslateUi(self, TelaLogin):
         _translate = QtCore.QCoreApplication.translate

@@ -18,7 +18,9 @@ class Ui_TelaTexto(object):
         self.ui = Ui_TelaPrincipal()
         self.ui.setupUi(self.janelaPrincipal)
         self.janelaPrincipal.show()
-        
+
+        TelaTexto.hide()
+
     def mudarClick():
         global click
         click+=1
@@ -38,12 +40,7 @@ class Ui_TelaTexto(object):
                 self.label_txt.setText(linha[1])
                 click+=1
                 break
-
-        """
-        for linha in c.execute("SELECT * FROM TEXTO"):
-            print(linha[0]) #ta printando certinho
-            self.label_txt.setText(linha[0])
-        """
+                
         connection.close()
 
     def setupUi(self, TelaTexto):
