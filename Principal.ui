@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TelaPrincipal</class>
+ <widget class="QDialog" name="TelaPrincipal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>543</width>
+    <height>362</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Página Principal</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/icon.png</normaloff>img/icon.png</iconset>
+  </property>
+  <widget class="QLabel" name="label_bemvindo2">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>20</y>
+     <width>351</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Bem vindo novamente!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_playlist">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>110</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="statusTip">
+    <string>Abre nossa playlist num link do Spotify</string>
+   </property>
+   <property name="whatsThis">
+    <string>Link da playlist</string>
+   </property>
+   <property name="text">
+    <string>Playlist (Spotify)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_evolucao">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="statusTip">
+    <string>Abre uma janela com nossa evolução</string>
+   </property>
+   <property name="whatsThis">
+    <string>Nossa evolução</string>
+   </property>
+   <property name="text">
+    <string>Evolução</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_album">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="statusTip">
+    <string>Abre nosso álbum num link do Google Fotos</string>
+   </property>
+   <property name="whatsThis">
+    <string>Link do álbum</string>
+   </property>
+   <property name="text">
+    <string>Álbum (Google Fotos)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_texto">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>110</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="statusTip">
+    <string>Abre uma janela com o texto do início</string>
+   </property>
+   <property name="whatsThis">
+    <string>Texto de aniversário</string>
+   </property>
+   <property name="text">
+    <string>Texto do Início</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_creditos">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>230</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="statusTip">
+    <string>Abre uma janela com os créditos do programa</string>
+   </property>
+   <property name="whatsThis">
+    <string>Créditos</string>
+   </property>
+   <property name="text">
+    <string>Créditos</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_frases">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>300</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+   <property name="statusTip">
+    <string>O que é isso?</string>
+   </property>
+   <property name="whatsThis">
+    <string>??</string>
+   </property>
+   <property name="text">
+    <string>Clica aqui...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_felizaniversario">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>60</y>
+     <width>271</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Feliz Primeiro Aniversário! &lt;3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>120</y>
+     <width>131</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>img/pinguim.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
