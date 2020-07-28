@@ -10,6 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
 from TelaTexto import Ui_TelaTexto
+from Principal import Ui_TelaPrincipal
 
 class Ui_TelaLogin(object):
     def show_MessageBox(self, title, message):
@@ -25,17 +26,43 @@ class Ui_TelaLogin(object):
         self.ui = Ui_TelaTexto()
         self.ui.setupUi(self.janelaTxt)
         self.janelaTxt.show()
-        TelaLogin.hide()
+        TelaLogin.close()
+
+    def show_Principal(self):
+        self.janelaPrincipal = QtWidgets.QDialog()
+        self.ui = Ui_TelaPrincipal()
+        self.ui.setupUi(self.janelaPrincipal)
+        self.janelaPrincipal.show()
+        TelaLogin.close()
+
+    def update_Entrada(self):
+        login = self.form_login.text()
+
+        connection = sqlite3.connect("login.db")
+        #c = connection.cursor()
+        connection.execute("UPDATE USERS SET ENTRADA = 1 WHERE LOGIN = ?", (login,))
+        connection.commit()
+        #c.close()
+        connection.close()
 
     def loginCheck(self):
+        entrada = 2
         login = self.form_login.text()
         senha = self.form_senha.text()
 
         connection = sqlite3.connect("login.db")
-        result = connection.execute("SELECT * FROM USERS WHERE LOGIN = ? AND SENHA = ?", (login, senha))
+        c = connection.cursor()
+        result = c.execute("SELECT * FROM USERS WHERE LOGIN = ? AND SENHA = ?", (login, senha))
+        for linha in result:
+            entrada = linha[2]
+            print(entrada)
 
-        if(len(result.fetchall()) > 0): #se tiver achado
-            self.show_Texto()
+        if(entrada != 2): #se tiver achado
+            if(entrada == 0):
+                self.show_Texto()
+                self.update_Entrada()
+            else:
+                self.show_Principal()
         else:
             print("usuario nao achado")
             self.show_MessageBox("Ei!", "Login e/ou senha inválidos.")

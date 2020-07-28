@@ -19,7 +19,8 @@ class Ui_TelaTexto(object):
         self.ui.setupUi(self.janelaPrincipal)
         self.janelaPrincipal.show()
 
-        TelaTexto.hide()
+        #self.close()
+        #jesus alguém me salva nesse troço desisto dessa merda por ora
 
     def mudarClick():
         global click
@@ -75,6 +76,9 @@ class Ui_TelaTexto(object):
         TelaTexto.setWindowTitle(_translate("TelaTexto", "..."))
         self.label_txt.setText(_translate("TelaTexto", "Oi :) Você deve estar se perguntando o que é isso."))
         self.btn_continuar.setText(_translate("TelaTexto", "Continuar"))
+
+    def close(self):
+        QtWidgets.QDialog.close()
 
 
 if __name__ == "__main__":
