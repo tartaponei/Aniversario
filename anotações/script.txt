@@ -45,7 +45,7 @@ Obrigada ao Bruno por ter aguentado minhas mensagens infinitas com minhas dúvid
 Na questão de apoio moral, agradeço também à Carina, além do próprio Jonathan, que não sabia o propósito disso mas me dava apoio mesmo assim.
 Obrigada támbém à Nayure, de tão longe sempre me dando apoio moral também, e por ter me dado algumas ideias pra esse projeto.
 
-
+E obrigada principalmente ao Jonathan. Você foi a minha maior motivação pra estudar o PyQt5 e todas as questões sobre interface (coisa que não é a minha praia). Fazer as coisas pra você aumenta minha motivação pelo menos umas 5x. Obrigada por me motivar e ser um exemplo.
 
 ========== BOTÃO "CLICA AQUI..." ======================================
 * frases enumeradas escolhidas aleatoriamente pelo seu número

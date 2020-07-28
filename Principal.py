@@ -9,10 +9,13 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import webbrowser
-
+#import importlib
+import sys
+sys.path.insert(1, './game')
 
 class Ui_TelaPrincipal(object):
-    #def show_
+    def abrirJogo(self):
+        from puzzle import GameGrid
 
     def openSpot(self):
         webbrowser.open("https://open.spotify.com/playlist/6QUi0mtWqckDpAFJBofeRT?si=5zKrtOIZQ5ica45FLTyFgQ")
@@ -34,6 +37,7 @@ class Ui_TelaPrincipal(object):
         self.label_bemvindo2.setFont(font)
         self.label_bemvindo2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_bemvindo2.setObjectName("label_bemvindo2")
+
         self.btn_playlist = QtWidgets.QPushButton(TelaPrincipal)
         self.btn_playlist.setGeometry(QtCore.QRect(30, 110, 141, 41))
         font = QtGui.QFont()
@@ -77,6 +81,17 @@ class Ui_TelaPrincipal(object):
         font.setPointSize(10)
         self.btn_creditos.setFont(font)
         self.btn_creditos.setObjectName("btn_creditos")
+
+        self.btn_jogo = QtWidgets.QPushButton(TelaPrincipal)
+        self.btn_jogo.setGeometry(QtCore.QRect(370, 170, 141, 41))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(10)
+        self.btn_jogo.setFont(font)
+        self.btn_jogo.setObjectName("btn_jogo")
+        self.btn_jogo.setText("Joguinho (créditos a\n yangshun no GitHub)")
+
+        self.btn_jogo.clicked.connect(self.abrirJogo)
 
         self.btn_frases = QtWidgets.QPushButton(TelaPrincipal)
         self.btn_frases.setGeometry(QtCore.QRect(430, 300, 81, 23))

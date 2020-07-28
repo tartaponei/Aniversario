@@ -229,6 +229,32 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="btn_jogo">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>170</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="statusTip">
+    <string>Abre uma janela com os créditos do programa</string>
+   </property>
+   <property name="whatsThis">
+    <string>Créditos</string>
+   </property>
+   <property name="text">
+    <string>Joguinho (Créditos a 
+yangshun no Github)</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
