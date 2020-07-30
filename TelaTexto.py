@@ -32,7 +32,7 @@ class Ui_TelaTexto(object):
         if(click == 16):
             self.show_Principal()
 
-        connection = sqlite3.connect("login.db")
+        connection = sqlite3.connect("database.db")
         c = connection.cursor()
 
         for linha in c.execute("SELECT ROWID, PARAGRAFO FROM TEXTO"):
@@ -70,6 +70,10 @@ class Ui_TelaTexto(object):
 
         self.retranslateUi(TelaTexto)
         QtCore.QMetaObject.connectSlotsByName(TelaTexto)
+
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        TelaTexto.setWindowIcon(icon)
 
     def retranslateUi(self, TelaTexto):
         _translate = QtCore.QCoreApplication.translate

@@ -38,7 +38,7 @@ class Ui_TelaLogin(object):
     def update_Entrada(self):
         login = self.form_login.text()
 
-        connection = sqlite3.connect("login.db")
+        connection = sqlite3.connect("database.db")
         #c = connection.cursor()
         connection.execute("UPDATE USERS SET ENTRADA = 1 WHERE LOGIN = ?", (login,))
         connection.commit()
@@ -50,7 +50,7 @@ class Ui_TelaLogin(object):
         login = self.form_login.text()
         senha = self.form_senha.text()
 
-        connection = sqlite3.connect("login.db")
+        connection = sqlite3.connect("database.db")
         c = connection.cursor()
         result = c.execute("SELECT * FROM USERS WHERE LOGIN = ? AND SENHA = ?", (login, senha))
         for linha in result:
