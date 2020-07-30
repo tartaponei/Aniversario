@@ -9,7 +9,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
-from TelaTexto import Ui_TelaTexto
+from Texto import Ui_TelaTexto
 from Principal import Ui_TelaPrincipal
 
 class Ui_TelaLogin(object):
