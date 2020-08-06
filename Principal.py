@@ -10,6 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from TextoInteiro import Ui_TelaTextoInteiro
 from Frase import Ui_TelaFrase
+from Evolucao import Ui_TelaEvolucao
 import webbrowser
 #import importlib
 import sys
@@ -17,6 +18,12 @@ import sys
 sys.path.insert(1, './game')
 
 class Ui_TelaPrincipal(object):
+    def show_Evolucao(self):
+        self.janelaEvo = QtWidgets.QDialog()
+        self.ui = Ui_TelaEvolucao()
+        self.ui.setupUi(self.janelaEvo)
+        self.janelaEvo.show()
+
     def show_Frase(self):
         self.janelaFrase = QtWidgets.QDialog()
         self.ui = Ui_TelaFrase()
@@ -73,6 +80,8 @@ class Ui_TelaPrincipal(object):
         font.setPointSize(10)
         self.btn_evolucao.setFont(font)
         self.btn_evolucao.setObjectName("btn_evolucao")
+
+        self.btn_evolucao.clicked.connect(self.show_Evolucao)
 
         self.btn_album = QtWidgets.QPushButton(TelaPrincipal)
         self.btn_album.setGeometry(QtCore.QRect(30, 170, 141, 41))
