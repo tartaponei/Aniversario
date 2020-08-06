@@ -72,9 +72,11 @@ class Ui_TelaLogin(object):
     def setupUi(self, TelaLogin):
         TelaLogin.setObjectName("TelaLogin")
         TelaLogin.resize(331, 251)
+
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         TelaLogin.setWindowIcon(icon)
+        
         self.centralwidget = QtWidgets.QWidget(TelaLogin)
         self.centralwidget.setObjectName("centralwidget")
         self.label_bemvindo1 = QtWidgets.QLabel(self.centralwidget)

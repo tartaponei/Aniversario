@@ -8,12 +8,20 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from TextoInteiro import Ui_TelaTextoInteiro
 import webbrowser
 #import importlib
 import sys
+#
 sys.path.insert(1, './game')
 
 class Ui_TelaPrincipal(object):
+    def show_TextoInteiro(self):
+        self.janelaTexto = QtWidgets.QDialog()
+        self.ui = Ui_TelaTextoInteiro()
+        self.ui.setupUi(self.janelaTexto)
+        self.janelaTexto.show()
+
     def abrirJogo(self):
         from puzzle import GameGrid
 
@@ -26,14 +34,17 @@ class Ui_TelaPrincipal(object):
     def setupUi(self, TelaPrincipal):
         TelaPrincipal.setObjectName("TelaPrincipal")
         TelaPrincipal.resize(543, 362)
+
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         TelaPrincipal.setWindowIcon(icon)
+
         self.label_bemvindo2 = QtWidgets.QLabel(TelaPrincipal)
         self.label_bemvindo2.setGeometry(QtCore.QRect(100, 20, 351, 31))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(24)
+
         self.label_bemvindo2.setFont(font)
         self.label_bemvindo2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_bemvindo2.setObjectName("label_bemvindo2")
@@ -74,6 +85,8 @@ class Ui_TelaPrincipal(object):
         self.btn_texto.setFont(font)
         self.btn_texto.setObjectName("btn_texto")
 
+        self.btn_texto.clicked.connect(self.show_TextoInteiro)
+
         self.btn_creditos = QtWidgets.QPushButton(TelaPrincipal)
         self.btn_creditos.setGeometry(QtCore.QRect(370, 230, 141, 41))
         font = QtGui.QFont()
@@ -108,12 +121,13 @@ class Ui_TelaPrincipal(object):
         self.label_felizaniversario.setFont(font)
         self.label_felizaniversario.setAlignment(QtCore.Qt.AlignCenter)
         self.label_felizaniversario.setObjectName("label_felizaniversario")
-        self.label = QtWidgets.QLabel(TelaPrincipal)
-        self.label.setGeometry(QtCore.QRect(210, 120, 131, 151))
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("img/pinguim.png"))
-        self.label.setScaledContents(True)
-        self.label.setObjectName("label")
+
+        self.foto = QtWidgets.QLabel(TelaPrincipal)
+        self.foto.setGeometry(QtCore.QRect(210, 120, 131, 151))
+        self.foto.setText("")
+        self.foto.setPixmap(QtGui.QPixmap("img/pinguim.png"))
+        self.foto.setScaledContents(True)
+        self.foto.setObjectName("foto")
 
         self.retranslateUi(TelaPrincipal)
         QtCore.QMetaObject.connectSlotsByName(TelaPrincipal)
@@ -122,26 +136,36 @@ class Ui_TelaPrincipal(object):
         _translate = QtCore.QCoreApplication.translate
         TelaPrincipal.setWindowTitle(_translate("TelaPrincipal", "Página Principal"))
         self.label_bemvindo2.setText(_translate("TelaPrincipal", "Bem vindo novamente!"))
+
         self.btn_playlist.setStatusTip(_translate("TelaPrincipal", "Abre nossa playlist num link do Spotify"))
         self.btn_playlist.setWhatsThis(_translate("TelaPrincipal", "Link da playlist"))
         self.btn_playlist.setText(_translate("TelaPrincipal", "Playlist (Spotify)"))
+
         self.btn_evolucao.setStatusTip(_translate("TelaPrincipal", "Abre uma janela com nossa evolução"))
         self.btn_evolucao.setWhatsThis(_translate("TelaPrincipal", "Nossa evolução"))
         self.btn_evolucao.setText(_translate("TelaPrincipal", "Evolução"))
+
         self.btn_album.setStatusTip(_translate("TelaPrincipal", "Abre nosso álbum num link do Google Fotos"))
         self.btn_album.setWhatsThis(_translate("TelaPrincipal", "Link do álbum"))
         self.btn_album.setText(_translate("TelaPrincipal", "Álbum (Google Fotos)"))
+
         self.btn_texto.setStatusTip(_translate("TelaPrincipal", "Abre uma janela com o texto do início"))
         self.btn_texto.setWhatsThis(_translate("TelaPrincipal", "Texto de aniversário"))
         self.btn_texto.setText(_translate("TelaPrincipal", "Texto do Início"))
+
+        self.btn_jogo.setStatusTip(_translate("TelaPrincipal", "Abre um joguinho"))
+        self.btn_jogo.setWhatsThis(_translate("TelaPrincipal", "Joguinho"))
+        self.btn_jogo.setText(_translate("TelaPrincipal", "Joguinho"))
+
         self.btn_creditos.setStatusTip(_translate("TelaPrincipal", "Abre uma janela com os créditos do programa"))
         self.btn_creditos.setWhatsThis(_translate("TelaPrincipal", "Créditos"))
         self.btn_creditos.setText(_translate("TelaPrincipal", "Créditos"))
+
         self.btn_frases.setStatusTip(_translate("TelaPrincipal", "O que é isso?"))
         self.btn_frases.setWhatsThis(_translate("TelaPrincipal", "??"))
         self.btn_frases.setText(_translate("TelaPrincipal", "Clica aqui..."))
-        self.label_felizaniversario.setText(_translate("TelaPrincipal", "Feliz Primeiro Aniversário! <3"))
 
+        self.label_felizaniversario.setText(_translate("TelaPrincipal", "Feliz Primeiro Aniversário! <3"))
 
 if __name__ == "__main__":
     import sys
