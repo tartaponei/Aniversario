@@ -9,6 +9,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from TextoInteiro import Ui_TelaTextoInteiro
+from Frase import Ui_TelaFrase
 import webbrowser
 #import importlib
 import sys
@@ -16,6 +17,12 @@ import sys
 sys.path.insert(1, './game')
 
 class Ui_TelaPrincipal(object):
+    def show_Frase(self):
+        self.janelaFrase = QtWidgets.QDialog()
+        self.ui = Ui_TelaFrase()
+        self.ui.setupUi(self.janelaFrase)
+        self.janelaFrase.show()
+
     def show_TextoInteiro(self):
         self.janelaTexto = QtWidgets.QDialog()
         self.ui = Ui_TelaTextoInteiro()
@@ -112,6 +119,8 @@ class Ui_TelaPrincipal(object):
         font.setFamily("Arial")
         self.btn_frases.setFont(font)
         self.btn_frases.setObjectName("btn_frases")
+
+        self.btn_frases.clicked.connect(self.show_Frase)
 
         self.label_felizaniversario = QtWidgets.QLabel(TelaPrincipal)
         self.label_felizaniversario.setGeometry(QtCore.QRect(140, 60, 271, 18))
