@@ -9,7 +9,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_TelaEvolucao(object):
     def setupUi(self, TelaEvolucao):
         TelaEvolucao.setObjectName("TelaEvolucao")

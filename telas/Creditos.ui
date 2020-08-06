@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>571</width>
-    <height>456</height>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,7 +23,7 @@
      <x>20</x>
      <y>10</y>
      <width>531</width>
-     <height>431</height>
+     <height>451</height>
     </rect>
    </property>
    <property name="font">
@@ -45,7 +45,9 @@ Obrigada ao Bruno por ter aguentado minhas mensagens infinitas com minhas dúvid
 Na questão de apoio moral, agradeço também à Carina, além do próprio Jonathan, que não sabia o propósito disso mas me dava apoio mesmo assim.
 Obrigada támbém à Nayure, de tão longe sempre me dando apoio moral também, e por ter me dado algumas ideias pra esse projeto.
 
-E obrigada principalmente ao Jonathan. Você foi a minha maior motivação pra estudar o PyQt5 e todas as questões sobre interface (coisa que não é a minha praia). Fazer as coisas pra você aumenta minha motivação pelo menos umas 5x. Obrigada por me motivar e ser um exemplo.</string>
+E obrigada principalmente ao Jonathan. Você foi a minha maior motivação pra estudar o PyQt5 e todas as questões sobre interface (coisa que não é a minha praia). Fazer as coisas pra você aumenta minha motivação pelo menos umas 5x. Obrigada por me motivar e ser um exemplo.
+
+Créditos a /yangshun pelo jogo do 2048.</string>
    </property>
    <property name="wordWrap">
     <bool>true</bool>

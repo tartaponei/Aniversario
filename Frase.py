@@ -11,10 +11,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
 import random
 
-
 class Ui_TelaFrase(object):
     def gerar_Frase(self):
-        n = random.randint(1, 10) #obs: mudar isso quando finalizar as frases no banco!!!!!!!!
+        n = random.randint(1, 18) #obs: mudar isso quando finalizar as frases no banco!!!!!!!!
         print(n)
 
         connection = sqlite3.connect("database.db")
@@ -24,6 +23,7 @@ class Ui_TelaFrase(object):
             if(linha[0] == n):
                 frase = linha[1]
                 return frase
+        connection.close()
 
     def setupUi(self, TelaFrase):
         TelaFrase.setObjectName("TelaFrase")
@@ -49,7 +49,6 @@ class Ui_TelaFrase(object):
         TelaFrase.setWindowTitle(_translate("TelaFrase", "..."))
         frase = self.gerar_Frase()
         self.label_frase.setText(_translate("TelaFrase", frase))
-
 
 if __name__ == "__main__":
     import sys

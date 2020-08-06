@@ -11,13 +11,20 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from TextoInteiro import Ui_TelaTextoInteiro
 from Frase import Ui_TelaFrase
 from Evolucao import Ui_TelaEvolucao
+from Creditos import Ui_TelaCreditos
 import webbrowser
-#import importlib
 import sys
-#
+import sqlite3
+
 sys.path.insert(1, './game')
 
 class Ui_TelaPrincipal(object):
+    def show_Creditos(self):
+        self.janelaCred = QtWidgets.QDialog()
+        self.ui = Ui_TelaCreditos()
+        self.ui.setupUi(self.janelaCred)
+        self.janelaCred.show()
+
     def show_Evolucao(self):
         self.janelaEvo = QtWidgets.QDialog()
         self.ui = Ui_TelaEvolucao()
@@ -111,6 +118,8 @@ class Ui_TelaPrincipal(object):
         self.btn_creditos.setFont(font)
         self.btn_creditos.setObjectName("btn_creditos")
 
+        self.btn_creditos.clicked.connect(self.show_Creditos)
+
         self.btn_jogo = QtWidgets.QPushButton(TelaPrincipal)
         self.btn_jogo.setGeometry(QtCore.QRect(370, 170, 141, 41))
         font = QtGui.QFont()
@@ -153,7 +162,7 @@ class Ui_TelaPrincipal(object):
     def retranslateUi(self, TelaPrincipal):
         _translate = QtCore.QCoreApplication.translate
         TelaPrincipal.setWindowTitle(_translate("TelaPrincipal", "Página Principal"))
-        self.label_bemvindo2.setText(_translate("TelaPrincipal", "Bem vindo novamente!"))
+        self.label_bemvindo2.setText(_translate("TelaPrincipal", "Bem-vindo!"))
 
         self.btn_playlist.setStatusTip(_translate("TelaPrincipal", "Abre nossa playlist num link do Spotify"))
         self.btn_playlist.setWhatsThis(_translate("TelaPrincipal", "Link da playlist"))
@@ -184,6 +193,10 @@ class Ui_TelaPrincipal(object):
         self.btn_frases.setText(_translate("TelaPrincipal", "Clica aqui..."))
 
         self.label_felizaniversario.setText(_translate("TelaPrincipal", "Feliz Primeiro Aniversário! <3"))
+
+#login: sasusaku
+#senha: euteamo
+#tudo minúsculo ;)
 
 if __name__ == "__main__":
     import sys

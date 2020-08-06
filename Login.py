@@ -39,10 +39,8 @@ class Ui_TelaLogin(object):
         login = self.form_login.text()
 
         connection = sqlite3.connect("database.db")
-        #c = connection.cursor()
         connection.execute("UPDATE USERS SET ENTRADA = 1 WHERE LOGIN = ?", (login,))
         connection.commit()
-        #c.close()
         connection.close()
 
     def loginCheck(self):
@@ -141,10 +139,6 @@ class Ui_TelaLogin(object):
 
         self.retranslateUi(TelaLogin)
         QtCore.QMetaObject.connectSlotsByName(TelaLogin)
-    """
-    def __init__(self):
-        self.btn_entrar.clicked.connect(self.close)
-    """
 
     def retranslateUi(self, TelaLogin):
         _translate = QtCore.QCoreApplication.translate
@@ -156,7 +150,6 @@ class Ui_TelaLogin(object):
         self.form_login.setPlaceholderText(_translate("TelaLogin", "Digite seu login..."))
         self.form_senha.setPlaceholderText(_translate("TelaLogin", "Digite sua senha..."))
         self.btn_entrar.setText(_translate("TelaLogin", "Entrar"))
-
 
 if __name__ == "__main__":
     import sys
